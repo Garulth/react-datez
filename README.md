@@ -33,7 +33,7 @@
 There is currently two ways to implement React-datez, as a redux-form component or a standlone date picker.
 
 # For npm users
-`npm i --save react-datez`
+`npm i --save react-datez@https://github.com/Garulth/react-datez.git`
 
 # For yarn users
 `yarn add react-datez@https://github.com/Garulth/react-datez.git`
