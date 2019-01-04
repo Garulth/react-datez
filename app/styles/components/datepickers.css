@@ -258,8 +258,26 @@ body.date-open {
 		&-title {
 			font-weight: 800;
 			text-align: center;
-			padding: 10px 0;
+			padding: 0;
 			color: #666;
+
+			&-btn {
+				background: transparent;
+				border: none;
+				outline: none;
+				cursor: pointer;
+				border-radius: 4px;
+				padding: 0.5rem 2rem;
+
+				&:hover {
+					background: rgba(158, 158, 158, 0.1);
+				}
+
+				&:active {
+					opacity: 0.3;
+				}
+			}
+
 		}
 
 		&>div {
@@ -486,20 +504,4 @@ a.selected-day,
 	background: linear-gradient(to left bottom, #14E3AD 25%, #0BC091);
 	border: none;
 	color: white;
-}
-
-.rdatez-calendar-title {
-	&>span {
-		padding: 0.5rem 2rem;
-		cursor: pointer;
-		border-radius: 4px;
-
-		&:hover {
-			background: rgba(158, 158, 158, 0.1);
-		}
-
-		&:active {
-			opacity: 0.3;
-		}
-	}
 }

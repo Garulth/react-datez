@@ -114,7 +114,7 @@ class ReactDatez extends Component {
         const years = []
 
         const visibleYear = this.state.visibleYear.format('YYYY')
-        const renderYear = (parseInt(visibleYear) + (10 - (this.state.visibleYear.format('YY') % 10)) - 9)
+        const renderYear = ((parseInt(visibleYear, 0) + (10 - (this.state.visibleYear.format('YY') % 10))) - 9)
         // change render year from here
         for (let i = 0; i <= 9; i += 1) {
             years.push(<a href="" className="rdatez-year" key={`years-${i}`} onClick={e => this.clickYear(e, renderYear + i)}>{renderYear + i}</a>)
@@ -125,12 +125,12 @@ class ReactDatez extends Component {
     initialiseDecadeCalendar() {
         const decades = []
         const visibleYear = this.state.visibleYear.format('YYYY')
-        const renderYear = (parseInt(visibleYear) + (10 - (this.state.visibleYear.format('YY') % 10)) - 80)
+        const renderYear = ((parseInt(visibleYear, 0) + (10 - (this.state.visibleYear.format('YY') % 10))) - 80)
         // const numbers =
         // change render year from here
         for (let i = 0; i < 8; i += 1) {
-            decades.push(<a href="" className="rdatez-year" key={`years-${i}`} onClick={e => this.clickDecade(e, renderYear + i * 10)}>
-                {renderYear + (i * 10) + 1} - {renderYear + (i + 1) * 10}
+            decades.push(<a href="" className="rdatez-year" key={`years-${i}`} onClick={e => this.clickDecade(e, renderYear + (i * 10))}>
+                {renderYear + (i * 10) + 1} - {renderYear + ((i + 1) * 10)}
             </a>)
         }
         return decades
@@ -151,20 +151,20 @@ class ReactDatez extends Component {
         days.push(days.shift())
         let calendarTitle = moment(this.state.currentMonthYear, 'M YYYY').format('MMMM YYYY')
         if (this.state.yearJumpOpen) {
-            calendarTitle = this.props.locale != 'en' ? 'Năm' : 'Years'
+            calendarTitle = this.props.locale !== 'en' ? 'Năm' : 'Years'
         }
 
         if (this.state.decadeJumpOpen) {
-            calendarTitle = this.props.locale != 'en' ? 'Thập kỷ' : 'Decades'
+            calendarTitle = this.props.locale !== 'en' ? 'Thập kỷ' : 'Decades'
         }
 
 
-        return calendar.length == 1 ?
+        return calendar.length === 1 ?
             <div>
                 <header className="rdatez-calendar-title">
-                    <span onClick={this.changeCalendar}>
+                    <button className="rdatez-calendar-title-btn" onClick={this.changeCalendar}>
                         {calendarTitle}
-                    </span>
+                    </button>
                 </header>
                 <section className="rdatez-daysofweek">
                     {days.map((d, index) => <span key={index}>{d}</span>)}
@@ -572,7 +572,7 @@ ReactDatez.defaultProps = {
     highlightWeekends: false,
     allowPast: false,
     allowFuture: true,
-    yearJump: true,
+    // yearJump: true,
     position: 'left',
     locale: 'en'
 }
@@ -595,7 +595,7 @@ ReactDatez.propTypes = {
     endDate: PropTypes.string,
     position: PropTypes.oneOf(['center', 'left', 'right']),
     dateFormat: PropTypes.string,
-    yearJump: PropTypes.bool,
+    // yearJump: PropTypes.bool,
     placeholder: PropTypes.string,
     defaultMonth: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     locale: PropTypes.string,
