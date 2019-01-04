@@ -16,7 +16,9 @@ body.date-open {
 	position: relative;
 	display: inline-block;
 
-	& a, & a:link, & a:visited {
+	& a,
+	& a:link,
+	& a:visited {
 		text-decoration: none;
 	}
 
@@ -28,14 +30,15 @@ body.date-open {
 		left: 50%;
 		transform: translate(-50%, 0);
 
-		&:before, &:after {
+		&:before,
+		&:after {
 			left: 50%;
 			transform: translate(-50%, 0);
 		}
 
 		@media (width < 769px) {
-				transform: none;
-				left: 0;
+			transform: none;
+			left: 0;
 		}
 	}
 
@@ -47,6 +50,7 @@ body.date-open {
 		width: 18px;
 		height: 18px;
 		fill: #3E3E3E;
+
 		&:hover {
 			cursor: pointer;
 		}
@@ -56,7 +60,8 @@ body.date-open {
 		left: auto;
 		right: 0;
 
-		&:before, &:after {
+		&:before,
+		&:after {
 			left: auto;
 			right: 12px;
 		}
@@ -72,18 +77,19 @@ body.date-open {
 		left: 0;
 		background: white;
 		width: 100%;
-		box-shadow: 0 5px 10px rgba(0,0,0,.05);
+		box-shadow: 0 5px 10px rgba(0, 0, 0, .05);
 		z-index: 200;
 
 		@media (width < 769px) {
-				overflow: scroll;
+			overflow: scroll;
 		}
 
 		@media (width > 768px) {
 			max-width: 400px;
 			min-width: 400px;
 		}
-		&.no-cal{
+
+		&.no-cal {
 			display: none;
 		}
 
@@ -102,7 +108,7 @@ body.date-open {
 				}
 			}
 
-			& .rdatez-calendar > div {
+			& .rdatez-calendar>div {
 				&:first-child {
 					margin-right: 16px;
 				}
@@ -113,7 +119,7 @@ body.date-open {
 			}
 		}
 
-		& > div {
+		&>div {
 			position: relative;
 		}
 
@@ -160,7 +166,7 @@ body.date-open {
 		background: none;
 		border: none;
 
-		& > svg {
+		&>svg {
 			fill: black;
 			height: 32px;
 			width: 32px;
@@ -174,19 +180,19 @@ body.date-open {
 	&-header {
 		@media (width < 769px) {
 			text-align: left;
-            position: fixed;
-            left: 0;
-            right: 0;
-            padding: 0 16px;
-            background: white;
-    		box-shadow: 0 5px 10px rgba(0,0,0,.05);
-            z-index: 999;
+			position: fixed;
+			left: 0;
+			right: 0;
+			padding: 0 16px;
+			background: white;
+			box-shadow: 0 5px 10px rgba(0, 0, 0, .05);
+			z-index: 999;
 		}
 	}
 
 	&-btn {
 		background: white;
-		border: 1px solid rgba(0,0,0,.2);
+		border: 1px solid rgba(0, 0, 0, .2);
 		border-radius: 4px;
 		text-align: center;
 		height: 36px;
@@ -201,9 +207,10 @@ body.date-open {
 			position: static;
 			margin-bottom: 16px;
 			margin-right: 8px;
+
 		}
 
-		& > svg {
+		&>svg {
 			fill: black;
 			width: 18px;
 			height: 18px;
@@ -212,6 +219,16 @@ body.date-open {
 
 		&-year {
 			left: 48px;
+
+			&-mobile {
+				display: none;
+
+				@media (width < 769px) {
+					display: block;
+					position: absolute;
+					left: 160px;
+				}
+			}
 		}
 
 		&-today {
@@ -235,23 +252,25 @@ body.date-open {
 		justify-content: space-between;
 
 		@media (width < 769px) {
-            margin-top: 80px;
-        }
+			margin-top: 80px;
+		}
 
 		&-title {
 			font-weight: 800;
 			text-align: center;
-    		padding: 10px 0;
+			padding: 10px 0;
 			color: #666;
 		}
 
-		& > div {
+		&>div {
 			width: 100%;
 		}
 
-		&-month, &-year {
+		&-month,
+		&-year {
 			display: flex;
 			flex-direction: row;
+			justify-content: center;
 			flex-wrap: wrap;
 			position: absolute;
 			padding: 16px;
@@ -260,12 +279,12 @@ body.date-open {
 			bottom: 0;
 			background: white;
 			width: 100%;
-			border-top: 1px solid rgba(0,0,0,.1);
-    	align-items: center;
+			border-top: 1px solid rgba(0, 0, 0, .1);
+			align-items: center;
 
 			@media (width < 769px) {
-					position: fixed;
-					height: 100%;
+				position: fixed;
+				height: 100%;
 			}
 		}
 	}
@@ -276,7 +295,7 @@ body.date-open {
 		display: flex;
 		color: #666;
 
-		& > span {
+		&>span {
 			width: 14.285%;
 			font-size: 11px;
 			text-align: center;
@@ -290,22 +309,22 @@ body.date-open {
 		align-items: center;
 		width: 14.285%;
 		height: 40px;
-		border-right: 1px solid rgba(0,0,0,.1);
-		border-bottom: 1px solid rgba(0,0,0,.1);
+		border-right: 1px solid rgba(0, 0, 0, .1);
+		border-bottom: 1px solid rgba(0, 0, 0, .1);
 		position: relative;
 		transition: none;
 		cursor: pointer;
 
 		&:after {
 			display: none;
-    }
+		}
 
 		&.weekday-1 {
-			border-left: 1px solid rgba(0,0,0,.1);
+			border-left: 1px solid rgba(0, 0, 0, .1);
 		}
 
 		&:nth-last-child(-n+8) {
-			border-bottom: 1px solid rgba(0,0,0,.1);
+			border-bottom: 1px solid rgba(0, 0, 0, .1);
 		}
 
 		&:last-child {
@@ -314,26 +333,66 @@ body.date-open {
 
 
 		&-spacer {
-			border-right: 1px solid rgba(0,0,0,.1);
-			border-bottom: 1px solid rgba(0,0,0,.1);
+			border-right: 1px solid rgba(0, 0, 0, .1);
+			border-bottom: 1px solid rgba(0, 0, 0, .1);
 
-			&.weekday-1 { display: none; }
-			&.weekday-2 { width: 14.285%; }
-			&.weekday-3 { width: calc(14.285% * 2); }
-			&.weekday-4 { width: calc(14.285% * 3); }
-			&.weekday-5 { width: calc(14.285% * 4); }
-			&.weekday-6 { width: calc(14.285% * 5); }
-			&.weekday-0 { width: calc(14.285% * 6); }
+			&.weekday-1 {
+				display: none;
+			}
+
+			&.weekday-2 {
+				width: 14.285%;
+			}
+
+			&.weekday-3 {
+				width: calc(14.285% * 2);
+			}
+
+			&.weekday-4 {
+				width: calc(14.285% * 3);
+			}
+
+			&.weekday-5 {
+				width: calc(14.285% * 4);
+			}
+
+			&.weekday-6 {
+				width: calc(14.285% * 5);
+			}
+
+			&.weekday-0 {
+				width: calc(14.285% * 6);
+			}
 		}
 	}
 
-	& .starts-on-1 .rdatez-day:nth-child(-n+8) { border-top: 1px solid rgba(0,0,0,.1); }
-	& .starts-on-2 .rdatez-day:nth-child(-n+7) { border-top: 1px solid rgba(0,0,0,.1); }
-	& .starts-on-3 .rdatez-day:nth-child(-n+6) { border-top: 1px solid rgba(0,0,0,.1); }
-	& .starts-on-4 .rdatez-day:nth-child(-n+5) { border-top: 1px solid rgba(0,0,0,.1); }
-	& .starts-on-5 .rdatez-day:nth-child(-n+4) { border-top: 1px solid rgba(0,0,0,.1); }
-	& .starts-on-6 .rdatez-day:nth-child(-n+3) { border-top: 1px solid rgba(0,0,0,.1); }
-	& .starts-on-0 .rdatez-day:nth-child(-n+2) { border-top: 1px solid rgba(0,0,0,.1); }
+	& .starts-on-1 .rdatez-day:nth-child(-n+8) {
+		border-top: 1px solid rgba(0, 0, 0, .1);
+	}
+
+	& .starts-on-2 .rdatez-day:nth-child(-n+7) {
+		border-top: 1px solid rgba(0, 0, 0, .1);
+	}
+
+	& .starts-on-3 .rdatez-day:nth-child(-n+6) {
+		border-top: 1px solid rgba(0, 0, 0, .1);
+	}
+
+	& .starts-on-4 .rdatez-day:nth-child(-n+5) {
+		border-top: 1px solid rgba(0, 0, 0, .1);
+	}
+
+	& .starts-on-5 .rdatez-day:nth-child(-n+4) {
+		border-top: 1px solid rgba(0, 0, 0, .1);
+	}
+
+	& .starts-on-6 .rdatez-day:nth-child(-n+3) {
+		border-top: 1px solid rgba(0, 0, 0, .1);
+	}
+
+	& .starts-on-0 .rdatez-day:nth-child(-n+2) {
+		border-top: 1px solid rgba(0, 0, 0, .1);
+	}
 
 	&-month {
 		display: flex;
@@ -349,9 +408,10 @@ body.date-open {
 			display: none;
 		}
 
-		&:hover, &.selected-day {
+		&:hover,
+		&.selected-day {
 			cursor: pointer;
-			background: rgba(0,0,0,.05);
+			background: rgba(0, 0, 0, .05);
 		}
 	}
 
@@ -361,8 +421,8 @@ body.date-open {
 		background: none;
 		justify-content: center;
 		align-items: center;
-		width: 25%;
-		height: 40px;
+		width: 33.3%;
+		height: 50px;
 		position: relative;
 		transition: none;
 
@@ -370,48 +430,76 @@ body.date-open {
 			display: none;
 		}
 
-		&:hover, &.selected-day {
+		&:hover,
+		&.selected-day {
 			cursor: pointer;
-			background: rgba(0,0,0,.05);
+			background: rgba(0, 0, 0, .05);
 		}
 	}
 }
 
 .rdatez-day {
-    color: #666;
+	color: #666;
 
-    &:hover {
-        background: rgba(0,0,0,0.1);
-    }
+	&:hover {
+		background: rgba(0, 0, 0, 0.1);
+	}
 
-    &.past-day {
-        color: rgba(0,0,0,0.4)
-    }
+	&.past-day {
+		color: rgba(0, 0, 0, 0.4)
+	}
 }
 
-.disallow-past a.rdatez-day, .disallow-future a.rdatez-day {
-    color: #666;
+.disallow-past a.rdatez-day,
+.disallow-future a.rdatez-day {
+	color: #666;
 }
 
-.disallow-past a.rdatez-day.past-day, .disallow-before-start a.rdatez-day.before-start, .disallow-after-end a.rdatez-day.after-end, .disallow-future a.rdatez-day:not(.past-day):not(.today) {
-    color: rgba(0,0,0,0.1);
-    cursor: not-allowed;
+.disallow-past a.rdatez-day.past-day,
+.disallow-before-start a.rdatez-day.before-start,
+.disallow-after-end a.rdatez-day.after-end,
+.disallow-future a.rdatez-day:not(.past-day):not(.today) {
+	color: rgba(0, 0, 0, 0.1);
+	cursor: not-allowed;
 
-    &:hover {
-        background: none;
-    }
+	&:hover {
+		background: none;
+	}
 }
 
-.highlight-weekends a.rdatez-day.weekday-6, .highlight-weekends a.rdatez-day.weekday-0 {
-    background: rgba(0,0,0,.05);
+.highlight-weekends a.rdatez-day.weekday-6,
+.highlight-weekends a.rdatez-day.weekday-0 {
+	background: rgba(0, 0, 0, .05);
 
-    &:hover {
-        background: rgba(0,0,0,0.1);
-    }
+	&:hover {
+		background: rgba(0, 0, 0, 0.1);
+	}
 }
 
-a.selected-day, .disallow-past a.rdatez-day.selected-day, .disallow-past a.rdatez-day.today.selected-day, .disallow-future a.rdatez-day.today.selected-day, .rdatez-day.past-day.selected-day, .highlight-weekends a.rdatez-day.weekday-6.selected-day, .highlight-weekends a.rdatez-day.weekday-0.selected-day {
-    background: linear-gradient(to left bottom, #14E3AD 25%, #0BC091);
-    border: none;
-    color: white;
+a.selected-day,
+.disallow-past a.rdatez-day.selected-day,
+.disallow-past a.rdatez-day.today.selected-day,
+.disallow-future a.rdatez-day.today.selected-day,
+.rdatez-day.past-day.selected-day,
+.highlight-weekends a.rdatez-day.weekday-6.selected-day,
+.highlight-weekends a.rdatez-day.weekday-0.selected-day {
+	background: linear-gradient(to left bottom, #14E3AD 25%, #0BC091);
+	border: none;
+	color: white;
+}
+
+.rdatez-calendar-title {
+	&>span {
+		padding: 0.5rem 2rem;
+		cursor: pointer;
+		border-radius: 4px;
+
+		&:hover {
+			background: rgba(158, 158, 158, 0.1);
+		}
+
+		&:active {
+			opacity: 0.3;
+		}
+	}
 }
