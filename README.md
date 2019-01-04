@@ -3,7 +3,7 @@
 ![react-dates-banner](https://user-images.githubusercontent.com/2343152/27081129-5f675992-5082-11e7-8254-0d59e88756a8.png)
 # react-datez
 #### A customizable, flexible and delicious react date picker.
-## This repo is forked from react-datez library of `secretyouth`. I just adding some functions to do my job.
+# This repo is forked from react-datez library of `secretyouth`. I just adding some functions to fix my own job.
 
 ## Example
 ![react-gif](https://user-images.githubusercontent.com/2343152/27118852-8ebe99a0-5120-11e7-843c-52f58d7dec1f.gif)
@@ -31,10 +31,11 @@
 
 # How to use
 There is currently two ways to implement React-datez, as a redux-form component or a standlone date picker.
-## (for npm users)
+
+# For npm users
 `npm i --save react-datez`
 
-# (for yarn users)
+# For yarn users
 `yarn add react-datez@https://github.com/Garulth/react-datez.git`
 
 Add css to to your project (uses post-css)
