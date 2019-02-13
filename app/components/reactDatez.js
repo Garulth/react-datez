@@ -162,7 +162,12 @@ class ReactDatez extends Component {
         return calendar.length === 1 ?
             <div>
                 <header className="rdatez-calendar-title">
-                    <button type="button" className="rdatez-calendar-title-btn" onClick={this.changeCalendar}>
+                    <button
+type="button" className="rdatez-calendar-title-btn" onClick={(e) => {
+                        e.preventDefault()
+                        this.changeCalendar()
+                        }}
+                    >
                         {calendarTitle}
                     </button>
                 </header>
