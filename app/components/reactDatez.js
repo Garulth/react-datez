@@ -162,7 +162,7 @@ class ReactDatez extends Component {
         return calendar.length === 1 ?
             <div>
                 <header className="rdatez-calendar-title">
-                    <button className="rdatez-calendar-title-btn" onClick={this.changeCalendar}>
+                    <button type="button" className="rdatez-calendar-title-btn" onClick={this.changeCalendar}>
                         {calendarTitle}
                     </button>
                 </header>
@@ -495,7 +495,7 @@ class ReactDatez extends Component {
                 {this.state.datePickerOpen && <div className={pickerClass} style={{ top: this.state.datePickerInputHeight }}>
                     <div>
                         <header className="rdatez-header">
-                            <button className="rdatez-mobile-close" onClick={this.closePicker}>
+                            <button type="button" className="rdatez-mobile-close" onClick={this.closePicker}>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
                                     <path d="M16.8535,8.1465a.5.5,0,0,0-.707,0L12.5,11.793,8.8535,8.1465a.5.5,0,0,0-.707.707L11.793,12.5,8.1465,16.1465a.5.5,0,1,0,.707.707L12.5,13.207l3.6465,3.6465a.5.5,0,0,0,.707-.707L13.207,12.5l3.6465-3.6465A.5.5,0,0,0,16.8535,8.1465Z" />
                                     <path d="M12.5,0A12.5,12.5,0,1,0,25,12.5,12.5,12.5,0,0,0,12.5,0Zm0,24A11.5,11.5,0,1,1,24,12.5,11.5129,11.5129,0,0,1,12.5,24Z" />
@@ -512,7 +512,7 @@ class ReactDatez extends Component {
                                 </svg>
                             </button>
                             { this.props.yearButton ? this.props.yearButton :
-                            <button className="rdatez-btn rdatez-btn-year-mobile" onClick={this.changeCalendar}>
+                            <button type="button" className="rdatez-btn rdatez-btn-year-mobile" onClick={this.changeCalendar}>
                                 { this.state.yearJumpOpen ? 'D' : 'Y' }
                             </button>}
                             {!this.state.disabledToday && <button type="button" className="rdatez-btn rdatez-btn-today" onClick={e => this.jumpToToday(e)}>
