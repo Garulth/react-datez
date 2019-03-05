@@ -318,7 +318,7 @@ type="button" className="rdatez-calendar-title-btn" onClick={(e) => {
         } else
         if (this.state.yearJumpOpen) {
             this.setState({
-                visibleYear: this.state.visibleYear.add(12, 'years')
+                visibleYear: this.state.visibleYear.add(10, 'years')
             })
             this.initialiseYearCalendar()
         } else {
@@ -338,7 +338,7 @@ type="button" className="rdatez-calendar-title-btn" onClick={(e) => {
         } else
         if (this.state.yearJumpOpen) {
             this.setState({
-                visibleYear: this.state.visibleYear.subtract(12, 'years')
+                visibleYear: this.state.visibleYear.subtract(10, 'years')
             })
             this.initialiseYearCalendar()
         } else {
